@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s0="http://tempuri.org/" xmlns:tns="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="VersionControl">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="VersionMajor" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="VersionMinor" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="VersionControlResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="VersionControlResult" type="xs:boolean" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ErroMessage" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Login">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="mUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="mPassword" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="mDeviceNo" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LoginResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="LoginResult" type="tns:DTOMobileAccount" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="DTOMobileAccount">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="AccountID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RefID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AccountTypeID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OrgUnitID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Username" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Password" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DeviceNo" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RoleID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AddressID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ContactID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Lockout" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LastIpAddress" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DateLockout" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LastLoginDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DateCreated" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DateUpdated" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ExpiryDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DateActivated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StartDate" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EndDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LastName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FirstName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Email" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AccountTypeText" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ServerUrl" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Logo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="RegisterDevice">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="mUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="mPassword" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="mDeviceNo" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RegisterDeviceResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="RegisterDeviceResult" type="tns:DTOMobileAccount" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UnRegisterDevice">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="mUserName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="mPassword" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UnRegisterDeviceResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="UnRegisterDeviceResult" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DTOMobileAccount" nillable="true" type="tns:DTOMobileAccount" />
+      <xs:element name="boolean" type="xs:boolean" />
+    </xs:schema>
+  </types>
+  <message name="VersionControlSoapIn">
+    <part name="parameters" element="tns:VersionControl" />
+  </message>
+  <message name="VersionControlSoapOut">
+    <part name="parameters" element="tns:VersionControlResponse" />
+  </message>
+  <message name="LoginSoapIn">
+    <part name="parameters" element="tns:Login" />
+  </message>
+  <message name="LoginSoapOut">
+    <part name="parameters" element="tns:LoginResponse" />
+  </message>
+  <message name="RegisterDeviceSoapIn">
+    <part name="parameters" element="tns:RegisterDevice" />
+  </message>
+  <message name="RegisterDeviceSoapOut">
+    <part name="parameters" element="tns:RegisterDeviceResponse" />
+  </message>
+  <message name="UnRegisterDeviceSoapIn">
+    <part name="parameters" element="tns:UnRegisterDevice" />
+  </message>
+  <message name="UnRegisterDeviceSoapOut">
+    <part name="parameters" element="tns:UnRegisterDeviceResponse" />
+  </message>
+  <message name="LoginHttpGetIn">
+    <part name="mUserName" type="s:string" />
+    <part name="mPassword" type="s:string" />
+    <part name="mDeviceNo" type="s:string" />
+  </message>
+  <message name="LoginHttpGetOut">
+    <part name="Body" element="tns:DTOMobileAccount" />
+  </message>
+  <message name="RegisterDeviceHttpGetIn">
+    <part name="mUserName" type="s:string" />
+    <part name="mPassword" type="s:string" />
+    <part name="mDeviceNo" type="s:string" />
+  </message>
+  <message name="RegisterDeviceHttpGetOut">
+    <part name="Body" element="tns:DTOMobileAccount" />
+  </message>
+  <message name="UnRegisterDeviceHttpGetIn">
+    <part name="mUserName" type="s:string" />
+    <part name="mPassword" type="s:string" />
+  </message>
+  <message name="UnRegisterDeviceHttpGetOut">
+    <part name="Body" element="tns:boolean" />
+  </message>
+  <message name="LoginHttpPostIn">
+    <part name="mUserName" type="s:string" />
+    <part name="mPassword" type="s:string" />
+    <part name="mDeviceNo" type="s:string" />
+  </message>
+  <message name="LoginHttpPostOut">
+    <part name="Body" element="tns:DTOMobileAccount" />
+  </message>
+  <message name="RegisterDeviceHttpPostIn">
+    <part name="mUserName" type="s:string" />
+    <part name="mPassword" type="s:string" />
+    <part name="mDeviceNo" type="s:string" />
+  </message>
+  <message name="RegisterDeviceHttpPostOut">
+    <part name="Body" element="tns:DTOMobileAccount" />
+  </message>
+  <message name="UnRegisterDeviceHttpPostIn">
+    <part name="mUserName" type="s:string" />
+    <part name="mPassword" type="s:string" />
+  </message>
+  <message name="UnRegisterDeviceHttpPostOut">
+    <part name="Body" element="tns:boolean" />
+  </message>
+  <portType name="Service1Soap">
+    <operation name="VersionControl">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check Application Version</wsdl:documentation>
+      <input message="tns:VersionControlSoapIn" />
+      <output message="tns:VersionControlSoapOut" />
+    </operation>
+    <operation name="Login">
+      <input message="tns:LoginSoapIn" />
+      <output message="tns:LoginSoapOut" />
+    </operation>
+    <operation name="RegisterDevice">
+      <input message="tns:RegisterDeviceSoapIn" />
+      <output message="tns:RegisterDeviceSoapOut" />
+    </operation>
+    <operation name="UnRegisterDevice">
+      <input message="tns:UnRegisterDeviceSoapIn" />
+      <output message="tns:UnRegisterDeviceSoapOut" />
+    </operation>
+  </portType>
+  <portType name="Service1HttpGet">
+    <operation name="Login">
+      <input message="tns:LoginHttpGetIn" />
+      <output message="tns:LoginHttpGetOut" />
+    </operation>
+    <operation name="RegisterDevice">
+      <input message="tns:RegisterDeviceHttpGetIn" />
+      <output message="tns:RegisterDeviceHttpGetOut" />
+    </operation>
+    <operation name="UnRegisterDevice">
+      <input message="tns:UnRegisterDeviceHttpGetIn" />
+      <output message="tns:UnRegisterDeviceHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="Service1HttpPost">
+    <operation name="Login">
+      <input message="tns:LoginHttpPostIn" />
+      <output message="tns:LoginHttpPostOut" />
+    </operation>
+    <operation name="RegisterDevice">
+      <input message="tns:RegisterDeviceHttpPostIn" />
+      <output message="tns:RegisterDeviceHttpPostOut" />
+    </operation>
+    <operation name="UnRegisterDevice">
+      <input message="tns:UnRegisterDeviceHttpPostIn" />
+      <output message="tns:UnRegisterDeviceHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="VersionControl">
+      <soap:operation soapAction="http://tempuri.org/VersionControl" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegisterDevice">
+      <soap:operation soapAction="http://tempuri.org/RegisterDevice" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UnRegisterDevice">
+      <soap:operation soapAction="http://tempuri.org/UnRegisterDevice" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="VersionControl">
+      <soap12:operation soapAction="http://tempuri.org/VersionControl" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegisterDevice">
+      <soap12:operation soapAction="http://tempuri.org/RegisterDevice" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UnRegisterDevice">
+      <soap12:operation soapAction="http://tempuri.org/UnRegisterDevice" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="Service1HttpGet" type="tns:Service1HttpGet">
+    <http:binding verb="GET" />
+    <operation name="Login">
+      <http:operation location="/Login" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="RegisterDevice">
+      <http:operation location="/RegisterDevice" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="UnRegisterDevice">
+      <http:operation location="/UnRegisterDevice" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="Service1HttpPost" type="tns:Service1HttpPost">
+    <http:binding verb="POST" />
+    <operation name="Login">
+      <http:operation location="/Login" />
+      <input>
+        <mime:content part="" type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="RegisterDevice">
+      <http:operation location="/RegisterDevice" />
+      <input>
+        <mime:content part="" type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="UnRegisterDevice">
+      <http:operation location="/UnRegisterDevice" />
+      <input>
+        <mime:content part="" type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Service1">
+    <port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://testlogin.orderlinc.com:8084/OrderLincRegistry.asmx" />
+    </port>
+    <port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://testlogin.orderlinc.com:8084/OrderLincRegistry.asmx" />
+    </port>
+    <port name="Service1HttpGet" binding="tns:Service1HttpGet">
+      <http:address location="http://testlogin.orderlinc.com:8084/OrderLincRegistry.asmx" />
+    </port>
+    <port name="Service1HttpPost" binding="tns:Service1HttpPost">
+      <http:address location="http://testlogin.orderlinc.com:8084/OrderLincRegistry.asmx" />
+    </port>
+  </service>
+</definitions>

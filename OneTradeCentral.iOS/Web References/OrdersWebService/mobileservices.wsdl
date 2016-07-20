@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s0="http://4solutions.co.au/" xmlns:tns="http://4solutions.co.au/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://4solutions.co.au/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://4solutions.co.au/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="IsOnline">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="IsOnlineResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="IsOnlineResult" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EmailNotification">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="Email" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EmailNotificationResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="EmailNotificationResult" type="xs:boolean" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="VersionControl">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="VersionMajor" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="VersionMinor" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="VersionControlResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="VersionControlResult" type="xs:boolean" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ErroMessage" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetReferenceData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="salesOrgNo" type="xs:long" />
+            <xs:element minOccurs="1" maxOccurs="1" name="repAccountNo" type="xs:long" />
+            <xs:element minOccurs="0" maxOccurs="1" name="mOrderLincVersion" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="mIOSVersion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetReferenceDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GetReferenceDataResult">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SubmitOrder">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="order" type="tns:DTOOrder" />
+            <xs:element minOccurs="0" maxOccurs="1" name="imageArray" type="xs:base64Binary" />
+            <xs:element minOccurs="0" maxOccurs="1" name="contact" type="tns:DTOContact" />
+            <xs:element minOccurs="0" maxOccurs="1" name="uName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="uPW" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="deviceNo" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="DTOOrder">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="OrderID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SalesOrgID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CustomerID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SalesRepAccountID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ProviderID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ProviderWarehouseID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OrderDate" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DeliveryDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="InvoiceDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SYSOrderStatusID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="OrderNumber" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ReceivedDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ReleaseDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsSent" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsHeld" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DateCreated" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DateUpdated" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CreatedByUserID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UpdatedByUserID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="HoldUntilDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsMobile" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="OrderGUID" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ProviderCustomerCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="OrderLine" type="tns:ArrayOfDTOOrderLine" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SYSOrderStatusText" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CustomerName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ProviderName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CreatedByName" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsRegularOrder" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RequestedReleaseDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfDTOOrderLine">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOOrderLine" nillable="true" type="tns:DTOOrderLine" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DTOOrderLine">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="OrderLineID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OrderID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LineNum" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ProductID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OrderQty" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DespatchQty" type="xs:float" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UOM" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OrderPrice" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DespatchPrice" type="xs:float" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ItemStatus" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ErrorText" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Discount" type="xs:float" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ProductCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PrimarySKU" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ProductName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GTINCode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DTOContact">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ContactID" type="xs:long" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Fax" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Mobile" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Email" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LastName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FirstName" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CreatedByUserID" type="xs:long" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OldID" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SubmitOrderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="SubmitOrderResult" type="xs:long" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ServerMessage" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CreateError">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="CreateErrorResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="CreateErrorResult" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LastReleaseDate">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="LastReleaseDateResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="LastReleaseDateResult" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="IsOnlineSoapIn">
+    <part name="parameters" element="tns:IsOnline" />
+  </message>
+  <message name="IsOnlineSoapOut">
+    <part name="parameters" element="tns:IsOnlineResponse" />
+  </message>
+  <message name="EmailNotificationSoapIn">
+    <part name="parameters" element="tns:EmailNotification" />
+  </message>
+  <message name="EmailNotificationSoapOut">
+    <part name="parameters" element="tns:EmailNotificationResponse" />
+  </message>
+  <message name="VersionControlSoapIn">
+    <part name="parameters" element="tns:VersionControl" />
+  </message>
+  <message name="VersionControlSoapOut">
+    <part name="parameters" element="tns:VersionControlResponse" />
+  </message>
+  <message name="GetReferenceDataSoapIn">
+    <part name="parameters" element="tns:GetReferenceData" />
+  </message>
+  <message name="GetReferenceDataSoapOut">
+    <part name="parameters" element="tns:GetReferenceDataResponse" />
+  </message>
+  <message name="SubmitOrderSoapIn">
+    <part name="parameters" element="tns:SubmitOrder" />
+  </message>
+  <message name="SubmitOrderSoapOut">
+    <part name="parameters" element="tns:SubmitOrderResponse" />
+  </message>
+  <message name="CreateErrorSoapIn">
+    <part name="parameters" element="tns:CreateError" />
+  </message>
+  <message name="CreateErrorSoapOut">
+    <part name="parameters" element="tns:CreateErrorResponse" />
+  </message>
+  <message name="LastReleaseDateSoapIn">
+    <part name="parameters" element="tns:LastReleaseDate" />
+  </message>
+  <message name="LastReleaseDateSoapOut">
+    <part name="parameters" element="tns:LastReleaseDateResponse" />
+  </message>
+  <portType name="mobileservicesSoap">
+    <operation name="IsOnline">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns true, webservice is active.</wsdl:documentation>
+      <input message="tns:IsOnlineSoapIn" />
+      <output message="tns:IsOnlineSoapOut" />
+    </operation>
+    <operation name="EmailNotification">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Test email notification.</wsdl:documentation>
+      <input message="tns:EmailNotificationSoapIn" />
+      <output message="tns:EmailNotificationSoapOut" />
+    </operation>
+    <operation name="VersionControl">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check Application Version</wsdl:documentation>
+      <input message="tns:VersionControlSoapIn" />
+      <output message="tns:VersionControlSoapOut" />
+    </operation>
+    <operation name="GetReferenceData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">gets reference data for a sales Organization</wsdl:documentation>
+      <input message="tns:GetReferenceDataSoapIn" />
+      <output message="tns:GetReferenceDataSoapOut" />
+    </operation>
+    <operation name="SubmitOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Accepts mobile orders and the signature image array associated with it.</wsdl:documentation>
+      <input message="tns:SubmitOrderSoapIn" />
+      <output message="tns:SubmitOrderSoapOut" />
+    </operation>
+    <operation name="CreateError">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creates error</wsdl:documentation>
+      <input message="tns:CreateErrorSoapIn" />
+      <output message="tns:CreateErrorSoapOut" />
+    </operation>
+    <operation name="LastReleaseDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check The Last Release Date of the Web Service</wsdl:documentation>
+      <input message="tns:LastReleaseDateSoapIn" />
+      <output message="tns:LastReleaseDateSoapOut" />
+    </operation>
+  </portType>
+  <binding name="mobileservicesSoap" type="tns:mobileservicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="IsOnline">
+      <soap:operation soapAction="http://4solutions.co.au/IsOnline" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EmailNotification">
+      <soap:operation soapAction="http://4solutions.co.au/EmailNotification" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="VersionControl">
+      <soap:operation soapAction="http://4solutions.co.au/VersionControl" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetReferenceData">
+      <soap:operation soapAction="http://4solutions.co.au/GetReferenceData" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SubmitOrder">
+      <soap:operation soapAction="http://4solutions.co.au/SubmitOrder" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateError">
+      <soap:operation soapAction="http://4solutions.co.au/CreateError" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="LastReleaseDate">
+      <soap:operation soapAction="http://4solutions.co.au/LastReleaseDate" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="mobileservicesSoap12" type="tns:mobileservicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="IsOnline">
+      <soap12:operation soapAction="http://4solutions.co.au/IsOnline" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EmailNotification">
+      <soap12:operation soapAction="http://4solutions.co.au/EmailNotification" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="VersionControl">
+      <soap12:operation soapAction="http://4solutions.co.au/VersionControl" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetReferenceData">
+      <soap12:operation soapAction="http://4solutions.co.au/GetReferenceData" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SubmitOrder">
+      <soap12:operation soapAction="http://4solutions.co.au/SubmitOrder" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateError">
+      <soap12:operation soapAction="http://4solutions.co.au/CreateError" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="LastReleaseDate">
+      <soap12:operation soapAction="http://4solutions.co.au/LastReleaseDate" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="mobileservices">
+    <port name="mobileservicesSoap" binding="tns:mobileservicesSoap">
+      <soap:address location="https://testwsorder.orderlinc.com/mobileservices.asmx" />
+    </port>
+    <port name="mobileservicesSoap12" binding="tns:mobileservicesSoap12">
+      <soap12:address location="https://testwsorder.orderlinc.com/mobileservices.asmx" />
+    </port>
+  </service>
+</definitions>

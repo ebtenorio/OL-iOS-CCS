@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UserID</key>
+	<integer>52341</integer>
+	<key>UserName</key>
+	<string>Eric</string>
+	<key>UserToken</key>
+	<string>3fgh*12m#nolk23</string>
+	<key>LastSyncDate</key>
+	<date>2013-04-19T16:20:06Z</date>
+	<key>OTCWebServiceURL</key>
+	<string>http://119.93.15.142:7002/OTCWebSVCSetup/OTCWebService.asmx</string>
+	<key>TransactionSourceCode</key>
+	<integer>4729241</integer>
+</dict>
+</plist>

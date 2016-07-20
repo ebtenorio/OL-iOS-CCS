@@ -1,0 +1,109 @@
+PRODUCTION
+v.2.2.2 Build 20150224
+- Corrected OldIDs fetch method for Products in the OrderLine
+
+v.2.2.1 Build 20150109
+- iOS 7.0 was set as the minimum iOS version
+
+v2.2 Build 20150109
+- Corrected Keycahin Access Group: This build uses an exact Keychain Access Group as opposed to using $(AppIdentifierPrefix)$(CFBundleIdentifier)
+
+v2.2 Build 20150108
+- Corrected checking of Internet reachability (Cellular and WiFi)
+
+v2.2 Build 20150107
+-  Corrected disaling/enabling of Cancel at Login
+
+v2.2 Build 20141222
+- Corrected App Icon
+- Corrected Login URL for AppStore release
+
+v2.2 Build 20141218
+- Corrected retrieval of Orders History details.
+
+v2.2 Build 20141217
+- Added OldIDs (Customer, Product, Provider and Warehouse local tables) to accommodate OldIDs from web service synchronization.
+- Added new keychain entry for the Last Version Release Date
+- Corrected retrieval of Order details for OrderLinc version 2.0.x
+
+v2.2 Build 20141211
+- Corrected retrieval of the IdentificationForVendor from the Keychain.
+
+v2.2 Build 20141205
+- IdentificationForVendor Persistence enhancements
+- Fixed sending orders that requires the persisted IDFV.
+
+v2.2 Build 20141202
+- IdentificationForVendor Persistence in the device' KeyChain
+
+v2.2 Build 20141128
+- Login view dimension have been modified.
+- Username field in Login View now displays the currently registered username to the device. 
+- Synchronization and Registration alerts had been separated.
+- Error messages (web services), have been fixed. When an error is version-related, alert header is "Connection Rejected," otherwise "Web Service Error."
+
+
+v2.2 Build 2014112408
+- Fixed local folder retrieval for iOS 8 and later.
+
+
+v2.2 Build 20141117
+- Minor changes (UI and Synchronisation)
+
+Build 2.1.1 (20141028)
+- UI Issues
+
+Build (20141014)
+- Removed/Hid the Cancel Button at Login View
+
+v.2.2 Build 20141013
+- Support for iOS 8 
+- Search Bar and Popover fix 
+
+Build 2.1.1 (20141103)
+- Fixed retrieval of contact details for the StoreList
+- Fixed retrieval of the State code for the StoreList
+- Fixed validation on Order view.
+- Fixed Provider Name label length for Order Confirmation view.
+
+v2.2 Build 201406017:
+- Added Start Date as a criteria for selecting stores and providers.
+- Fixed store re-selection bug.
+
+Build 201406017:
+- Added start and end dates to relevant queries.
+
+Build 20140615A:
+- Prompt users prior to navigating away from order confirmtaion page.
+
+Build 20140612A:
+- Added measures to prevent duplicate orders.
+- (Re-Upload) Changed URL to use staging.
+
+Build 20140531B:
+- Added Product Group Count in home page.
+
+Build 20140531A:
+- Incorporated changes in Product Group Web Services
+- Now using Club Sales Certificate and Build Profiles
+
+Build 20140528A:
+- Added email address format validation in order form.
+- Store ID is now saved in the local iOS database.
+- Enabled clear button in Contact Information fields.
+- EMail label changed to Email.
+
+Build 20140527A:
+- Homepage now displays count of unique products and customers instead of total record count
+- Fixed background upload bug for pending orders
+- Corrected product lookups for order line entries, added provider qualifier and distinct keyword
+
+Build 20140526A:
+- Added support for multiple providers
+- Provider is automatically selected if there is only one available choice
+- Warehouse is automatically selected if there is only one available choice
+- Product list choices are filtered based on selected provider
+- Optimized web service method calls
+
+
+TEST - GITHUB

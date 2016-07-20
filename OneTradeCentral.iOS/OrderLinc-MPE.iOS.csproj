@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF191382-5446-47B3-B447-5630E7AA4D0D}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>OneTradeCentral.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <ReleaseVersion>2.2</ReleaseVersion>
+    <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <CodesignKey>iPhone Distribution: 4Solutions Pty Ltd (EJ24Q24DZP)</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+    <AssemblyName>OrderLincTST</AssemblyName>
+    <CodesignProvision>0854c391-3db5-4448-b5d5-6247fd43c6dc</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>i386</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchUseThumb>true</MtouchUseThumb>
+    <CodesignProvision>5396507a-5e1f-49fb-9d47-0b041efedd6a</CodesignProvision>
+    <CodesignKey>iPhone Distribution: 4Solutions Pty Ltd (EJ24Q24DZP)</CodesignKey>
+    <AssemblyName>OrderLinc</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Distribution: 4Solutions Pty Ltd (EJ24Q24DZP)</CodesignKey>
+    <BuildIpa>true</BuildIpa>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchProfiling>true</MtouchProfiling>
+    <AssemblyName>OrderLincTST</AssemblyName>
+    <CodesignProvision>0854c391-3db5-4448-b5d5-6247fd43c6dc</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution: Powerforce Australia PTY LTD</CodesignKey>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <BuildIpa>true</BuildIpa>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchUseThumb>true</MtouchUseThumb>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <CodesignProvision>45033e92-ff9e-4169-84e5-e8984853f336</CodesignProvision>
+    <AssemblyName>OrderLincMPE</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <BuildIpa>true</BuildIpa>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution: Powerforce Australia PTY LTD</CodesignKey>
+    <CodesignKey>iPhone Distribution: 4Solutions Pty Ltd (EJ24Q24DZP)</CodesignKey>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchUseThumb>true</MtouchUseThumb>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <CodesignProvision>0854c391-3db5-4448-b5d5-6247fd43c6dc</CodesignProvision>
+    <AssemblyName>OrderLincTST</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution: 4Solutions Pty Ltd (EJ24Q24DZP)</CodesignKey>
+    <IpaPackageName>
+    </IpaPackageName>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>e2e8486e-f97e-4fc7-8219-92c99404cc47</CodesignProvision>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <BuildIpa>true</BuildIpa>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchUseThumb>true</MtouchUseThumb>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <AssemblyName>OrderLinc</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="Xamarin.iOS">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TimesSquare.iOS">
+      <HintPath>..\Components\timessquare-1.0.5\lib\ios-unified\TimesSquare.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="PLCrashReporterUnifiedBinding">
+      <HintPath>..\Components\xamarin-insights-1.10.4\lib\ios-unified\PLCrashReporterUnifiedBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\Components\xamarin-insights-1.10.4\lib\ios-unified\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="SignaturePad.iOS">
+      <HintPath>..\Components\signature-pad-1.3.7\lib\ios-unified\SignaturePad.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite">
+      <HintPath>..\Components\sqlite-net-1.0.8.3\lib\ios-unified\SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\Components\btprogresshud-1.15\lib\ios-unified\BTProgressHUD.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Orders\" />
+    <Folder Include="Products\" />
+    <Folder Include="Contacts\" />
+    <Folder Include="Store\" />
+    <Folder Include="Store2\" />
+    <Folder Include="Products2\" />
+    <Folder Include="ProductSelection\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Data\OneTradeCentral.DB" />
+    <None Include="Entitlements.plist" />
+    <None Include="Web References\OrderAppWebService\mobileservices.wsdl" />
+    <None Include="Web References\OrderAppWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="RELEASE-NOTES.txt" />
+    <None Include="Web References\OrderLincRegistry\OrderLincRegistry.wsdl" />
+    <None Include="Web References\OrderLincRegistry\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\OrdersWebService\mobileservices.disco" />
+    <None Include="Web References\OrdersWebService\mobileservices.wsdl" />
+    <None Include="Web References\OrdersWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="MainViewController.cs" />
+    <Compile Include="MainViewController.designer.cs">
+      <DependentUpon>MainViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RootViewController.cs" />
+    <Compile Include="ActionSheetDatePicker.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="DTOs\BarCodeType.cs" />
+    <Compile Include="Utility\DataGenerator.cs" />
+    <Compile Include="Orders\OrderCell.cs" />
+    <Compile Include="Orders\OrderCell.designer.cs">
+      <DependentUpon>OrderCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\OrderInfoViewController.cs" />
+    <Compile Include="Orders\OrderInfoViewController.designer.cs">
+      <DependentUpon>OrderInfoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\OrderLineScannerController.cs" />
+    <Compile Include="Orders\OrderLineScannerController.designer.cs">
+      <DependentUpon>OrderLineScannerController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\OrderListViewController.cs" />
+    <Compile Include="Orders\OrderListViewController.designer.cs">
+      <DependentUpon>OrderListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\OrderViewController.cs" />
+    <Compile Include="Orders\OrderViewController.designer.cs">
+      <DependentUpon>OrderViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\WebServiceFacade.cs" />
+    <Compile Include="Products\ProductListController.cs" />
+    <Compile Include="Products\ProductListController.designer.cs">
+      <DependentUpon>ProductListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\ProductListSource.cs" />
+    <Compile Include="Products\ProductScannerController.cs" />
+    <Compile Include="Products\ProductScannerController.designer.cs">
+      <DependentUpon>ProductScannerController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\ScannedProductController.cs" />
+    <Compile Include="Products\ScannedProductController.designer.cs">
+      <DependentUpon>ScannedProductController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\TermsController.cs" />
+    <Compile Include="Orders\TermsController.designer.cs">
+      <DependentUpon>TermsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTOs\Customer.cs" />
+    <Compile Include="DTOs\Distributor.cs" />
+    <Compile Include="DTOs\Order.cs" />
+    <Compile Include="DTOs\OrderLine.cs" />
+    <Compile Include="DTOs\PaymentTerms.cs" />
+    <Compile Include="DTOs\ProductCategory.cs" />
+    <Compile Include="DTOs\Product.cs" />
+    <Compile Include="DAO\SQLiteDAOFactory.cs" />
+    <Compile Include="DAO\IDAOFactory.cs" />
+    <Compile Include="Orders\OrderLineViewController.cs" />
+    <Compile Include="Orders\OrderLineViewController.designer.cs">
+      <DependentUpon>OrderLineViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\OrderDetailsViewController.cs" />
+    <Compile Include="Orders\OrderDetailsViewController.designer.cs">
+      <DependentUpon>OrderDetailsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppInfoViewController.cs" />
+    <Compile Include="AppInfoViewController.designer.cs">
+      <DependentUpon>AppInfoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTOs\AppInfo.cs" />
+    <Compile Include="Products\ProductEditorController.cs" />
+    <Compile Include="Products\ProductEditorController.designer.cs">
+      <DependentUpon>ProductEditorController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTOs\Country.cs" />
+    <Compile Include="DTOs\UOM.cs" />
+    <Compile Include="DTOs\Address.cs" />
+    <Compile Include="Orders\RequiredDateController.cs" />
+    <Compile Include="Orders\RequiredDateController.designer.cs">
+      <DependentUpon>RequiredDateController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarRowCell.cs" />
+    <Compile Include="Orders\OrderLineInfoController.cs" />
+    <Compile Include="Orders\OrderLineInfoController.designer.cs">
+      <DependentUpon>OrderLineInfoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\ProductBrowserView.cs" />
+    <Compile Include="Products\ProductBrowserView.designer.cs">
+      <DependentUpon>ProductBrowserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\ProductBrowserPageController.cs" />
+    <Compile Include="Products\ProductBrowserPageController.designer.cs">
+      <DependentUpon>ProductBrowserPageController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\ProductBrowserViewPad.cs" />
+    <Compile Include="Products\ProductBrowserViewPad.designer.cs">
+      <DependentUpon>ProductBrowserViewPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\ProductImageController.cs" />
+    <Compile Include="Orders\OrderConfirmationController.cs" />
+    <Compile Include="Orders\OrderConfirmationController.designer.cs">
+      <DependentUpon>OrderConfirmationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignatureView.cs" />
+    <Compile Include="SignatureView.designer.cs">
+      <DependentUpon>SignatureView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTOs\Credential.cs" />
+    <Compile Include="Utility\Identity.cs" />
+    <Compile Include="DTOs\UserAccount.cs" />
+    <Compile Include="Utility\SpinnerOverlay.cs" />
+    <Compile Include="LoginViewController.cs" />
+    <Compile Include="LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactListController.cs" />
+    <Compile Include="Contacts\ContactListController.designer.cs">
+      <DependentUpon>ContactListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactSelectionController.cs" />
+    <Compile Include="Contacts\ContactSelectionController.designer.cs">
+      <DependentUpon>ContactSelectionController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\StoreSelectionController.cs" />
+    <Compile Include="Orders\StoreSelectionController.designer.cs" />
+    <Compile Include="Store\AddressEditorController.cs" />
+    <Compile Include="Store\AddressEditorController.designer.cs">
+      <DependentUpon>AddressEditorController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\StoreListController.cs" />
+    <Compile Include="Store\StoreListController.designer.cs">
+      <DependentUpon>StoreListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\StoreViewController.cs" />
+    <Compile Include="Store\StoreViewController.designer.cs">
+      <DependentUpon>StoreViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\StoreListSource.cs" />
+    <Compile Include="Store\StoreListCell.cs" />
+    <Compile Include="Store\StoreListCell.designer.cs">
+      <DependentUpon>StoreListCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\ContactUtility.cs" />
+    <Compile Include="DTOs\ProductGroupLookup.cs" />
+    <Compile Include="DTOs\ProductGroup.cs" />
+    <Compile Include="Utility\BackgroundWorker.cs" />
+    <Compile Include="OrderStatusController.cs" />
+    <Compile Include="OrderStatusController.designer.cs">
+      <DependentUpon>OrderStatusController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Constants.cs" />
+    <Compile Include="DTOs\ProviderWarehouse.cs" />
+    <Compile Include="Orders\WarehouseController.cs" />
+    <Compile Include="Orders\WarehouseController.designer.cs">
+      <DependentUpon>WarehouseController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\LogViewController.cs" />
+    <Compile Include="Utility\LogViewController.designer.cs">
+      <DependentUpon>LogViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTOs\Log.cs" />
+    <Compile Include="Utility\Logger.cs" />
+    <Compile Include="CustomerListController.cs" />
+    <Compile Include="CustomerListController.designer.cs">
+      <DependentUpon>CustomerListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerEditorController.cs" />
+    <Compile Include="CustomerEditorController.designer.cs">
+      <DependentUpon>CustomerEditorController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogViewController.cs" />
+    <Compile Include="CatalogViewController.designer.cs">
+      <DependentUpon>CatalogViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\OrderAppWebService\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="DTOs\Contact.cs" />
+    <Compile Include="DTOs\Provider.cs" />
+    <Compile Include="Orders\ProviderController.cs" />
+    <Compile Include="Orders\ProviderController.designer.cs">
+      <DependentUpon>ProviderController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\HoldDateController.cs" />
+    <Compile Include="Orders\HoldDateController.designer.cs">
+      <DependentUpon>HoldDateController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\OrderLincRegistry\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Store2\StoreListingsController.cs" />
+    <Compile Include="Store2\StoreListingsController.designer.cs">
+      <DependentUpon>StoreListingsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store2\StoreListingsCell.cs" />
+    <Compile Include="Store2\StoreListingsCell.designer.cs">
+      <DependentUpon>StoreListingsCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store2\StoreListingsSource.cs" />
+    <Compile Include="Store2\StoreProviderController.cs" />
+    <Compile Include="Store2\StoreProviderController.designer.cs">
+      <DependentUpon>StoreProviderController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store2\StoresViewController.cs" />
+    <Compile Include="Store2\StoresViewController.designer.cs">
+      <DependentUpon>StoresViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products2\ProductListingsCell.cs" />
+    <Compile Include="Products2\ProductsListingsController.cs" />
+    <Compile Include="Products2\ProductsListingsController.designer.cs">
+      <DependentUpon>ProductsListingsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products2\ProductsProviderController.cs" />
+    <Compile Include="Products2\ProductsProviderController.designer.cs">
+      <DependentUpon>ProductsProviderController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products2\ProductsListingsSource.cs" />
+    <Compile Include="DAO\DALFacade.cs" />
+    <Compile Include="ProductSelection\ProductSelectionSource.cs" />
+    <Compile Include="ProductSelection\ProductSelectionCell.cs" />
+    <Compile Include="ProductSelection\ProductSelectionViewController.cs" />
+    <Compile Include="ProductSelection\ProductSelectionViewController.designer.cs">
+      <DependentUpon>ProductSelectionViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Reachability.cs" />
+    <Compile Include="DatePickerController.cs" />
+    <Compile Include="DatePickerController.designer.cs">
+      <DependentUpon>DatePickerController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\OrdersWebService\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Orders\OrderCell.xib" />
+    <InterfaceDefinition Include="MainStoryboard_iPad.storyboard" />
+    <InterfaceDefinition Include="MainStoryboard_iPhone.storyboard" />
+    <InterfaceDefinition Include="Products\ProductBrowserView.xib" />
+    <InterfaceDefinition Include="Products\ProductBrowserViewPad.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Data\CompanyNames.txt" />
+    <BundleResource Include="Resources\OTCSettings.plist" />
+    <BundleResource Include="Data\CountryCodes.csv" />
+    <BundleResource Include="Data\UOM.txt" />
+    <BundleResource Include="Data\ProductCategories.txt" />
+    <BundleResource Include="Resources\CalendarPreviousMonth.png" />
+    <BundleResource Include="Resources\CalendarPreviousMonth%402x.png" />
+    <BundleResource Include="Resources\CalendarRow.png" />
+    <BundleResource Include="Resources\CalendarRow%402x.png" />
+    <BundleResource Include="Resources\CalendarRowBottom.png" />
+    <BundleResource Include="Resources\CalendarRowBottom%402x.png" />
+    <BundleResource Include="Resources\CalendarSelectedDate.png" />
+    <BundleResource Include="Resources\CalendarSelectedDate%402x.png" />
+    <BundleResource Include="Resources\CalendarTodaysDate.png" />
+    <BundleResource Include="Resources\CalendarTodaysDate%402x.png" />
+    <BundleResource Include="Resources\wrigley.png" />
+    <BundleResource Include="Resources\wrigley-logo.jpg" />
+    <BundleResource Include="Resources\otc-home.png" />
+    <BundleResource Include="Resources\otc-list-orders.png" />
+    <BundleResource Include="Resources\otc-new-order.png" />
+    <BundleResource Include="Resources\otc-stores.png" />
+    <BundleResource Include="Resources\otc-product-list.png" />
+    <BundleResource Include="Resources\otc-X.png" />
+    <BundleResource Include="Resources\orderlinc-logo-1024.png" />
+    <BundleResource Include="Resources\orderlinc-logo-512.png" />
+    <BundleResource Include="Resources\logo-placeholder.png" />
+    <BundleResource Include="Resources\orderlinc-logo-home.png" />
+    <BundleResource Include="Resources\Icon-72.png" />
+    <BundleResource Include="Resources\Icon-72%402x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-50%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40.png" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="signature-pad">
+      <Version>1.3.7</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="sqlite-net">
+      <Version>1.0.8.3</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="timessquare">
+      <Version>1.0.5</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="btprogresshud">
+      <Version>1.15</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamarin-insights">
+      <Version>1.10.4</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://dev.paperlesstrail.net:7000/orderlincws/mobileservices.asmx?WSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\OrderAppWebService</RelPath>
+      <UpdateFromURL>http://dev.paperlesstrail.net:7000/orderlincws/mobileservices.asmx?WSDL</UpdateFromURL>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://testlogin.orderlinc.com:8084/OrderLincRegistry.asmx?WSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\OrderLincRegistry</RelPath>
+      <UpdateFromURL>http://testlogin.orderlinc.com:8084/OrderLincRegistry.asmx?WSDL</UpdateFromURL>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://testwsorder.orderlinc.com/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\OrdersWebService</RelPath>
+      <UpdateFromURL>https://testwsorder.orderlinc.com/</UpdateFromURL>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+    <ITunesArtwork Include="iTunesArtwork" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\orderlinc-logo-144.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\orderlinc-logo-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\orderlinc-logo-152.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\orderlinc-logo-100.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\orderlinc-logo-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\orderlinc-logo-80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\orderlinc-logo-29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\orderlinc-logo-58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-3.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-3.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-3.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-3.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-3.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-3.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-3.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-3.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-3.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-3.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-4.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-4.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-4.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-4.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-4.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-4.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-4.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-4.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-4.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-4.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-4.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-5.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-5.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-5.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-5.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-5.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-5.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-5.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-5.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-5.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-5.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-6.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-6.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-6.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-6.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-6.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-6.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-6.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-6.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-6.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-6.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-6.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-7.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-7.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-7.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-7.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-7.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-7.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-7.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-7.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-7.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-7.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-8.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-8.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-8.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-8.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-8.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-8.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-8.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-8.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-8.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-8.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-8.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-9.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-9.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-9.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-9.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-9.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-9.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-9.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-9.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-9.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-9.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-10.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-10.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-10.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-10.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-10.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-10.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-10.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-10.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-10.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-10.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-10.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-11.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-11.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-11.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-11.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-11.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-11.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-11.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-11.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-11.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-11.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-12.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-12.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-12.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-12.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-12.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-12.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-12.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-12.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-12.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-12.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-12.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-13.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-13.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-13.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-13.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-13.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-13.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-13.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-13.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-13.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-13.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-14.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-14.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-14.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-14.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-14.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-14.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-14.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-14.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-14.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-14.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-14.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-15.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-15.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-15.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-15.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-15.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-15.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-15.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-15.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-15.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-15.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-16.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-16.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-16.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-16.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-16.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-16.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-16.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-16.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-16.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-16.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-16.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-17.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-17.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-17.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-17.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-17.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-17.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-17.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-17.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-17.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-17.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-18.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-18.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-18.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-18.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-18.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-18.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-18.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-18.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-18.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-18.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-18.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-19.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-19.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-19.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-19.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-19.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-19.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-19.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-19.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-19.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-19.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-19.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-20.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-20.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-20.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-20.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-20.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-20.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-20.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-20.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-20.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-20.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-20.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-21.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-21.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-21.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-21.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-21.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-21.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-21.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-21.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-21.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-21.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-22.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-22.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-22.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-22.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-22.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-22.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-22.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-22.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-22.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-22.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-22.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-23.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-23.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-23.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-23.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-23.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-23.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-23.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-23.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-23.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-23.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-24.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-24.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-24.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-24.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-24.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-24.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-24.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-24.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-24.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-24.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-24.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-25.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-25.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-25.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-25.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-25.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-25.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-25.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-25.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-25.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-25.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-26.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-26.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-26.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-26.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-26.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-26.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-26.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-26.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-26.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-26.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-26.appiconset\Icon-Small%402x.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
