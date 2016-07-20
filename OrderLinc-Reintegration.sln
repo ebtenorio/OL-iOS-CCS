@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderLinc-MPE.iOS", "OneTradeCentral.iOS\OrderLinc-MPE.iOS.csproj", "{CF191382-5446-47B3-B447-5630E7AA4D0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderLinc.Tests.iOS", "OneTradeCentral.Tests.iOS\OrderLinc.Tests.iOS.csproj", "{D27FBACE-4403-4F54-B6DF-FC7A483D8883}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF191382-5446-47B3-B447-5630E7AA4D0D}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{CF191382-5446-47B3-B447-5630E7AA4D0D}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{CF191382-5446-47B3-B447-5630E7AA4D0D}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{CF191382-5446-47B3-B447-5630E7AA4D0D}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{CF191382-5446-47B3-B447-5630E7AA4D0D}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{CF191382-5446-47B3-B447-5630E7AA4D0D}.Debug|iPhone.Build.0 = Debug|iPhone
+		{CF191382-5446-47B3-B447-5630E7AA4D0D}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{CF191382-5446-47B3-B447-5630E7AA4D0D}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{CF191382-5446-47B3-B447-5630E7AA4D0D}.Release|iPhone.ActiveCfg = Release|iPhone
+		{CF191382-5446-47B3-B447-5630E7AA4D0D}.Release|iPhone.Build.0 = Release|iPhone
+		{CF191382-5446-47B3-B447-5630E7AA4D0D}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{CF191382-5446-47B3-B447-5630E7AA4D0D}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{D27FBACE-4403-4F54-B6DF-FC7A483D8883}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{D27FBACE-4403-4F54-B6DF-FC7A483D8883}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{D27FBACE-4403-4F54-B6DF-FC7A483D8883}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{D27FBACE-4403-4F54-B6DF-FC7A483D8883}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{D27FBACE-4403-4F54-B6DF-FC7A483D8883}.Debug|iPhone.Build.0 = Debug|iPhone
+		{D27FBACE-4403-4F54-B6DF-FC7A483D8883}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{D27FBACE-4403-4F54-B6DF-FC7A483D8883}.Release|iPhone.ActiveCfg = Release|iPhone
+		{D27FBACE-4403-4F54-B6DF-FC7A483D8883}.Release|iPhone.Build.0 = Release|iPhone
+		{D27FBACE-4403-4F54-B6DF-FC7A483D8883}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = OneTradeCentral.iOS\OrderLinc-MPE.iOS.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.VersionControlPolicy = $2
+		$2.inheritsSet = Mono
+		$0.ChangeLogPolicy = $3
+		$3.UpdateMode = None
+		$3.MessageStyle = $4
+		$4.LineAlign = 0
+		$3.inheritsSet = Mono
+		$0.StandardHeader = $5
+		$5.Text = 
+		$5.IncludeInNewFiles = True
+		version = 2.2
+	EndGlobalSection
+EndGlobal
