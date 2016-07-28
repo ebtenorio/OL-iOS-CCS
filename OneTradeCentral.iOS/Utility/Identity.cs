@@ -21,12 +21,12 @@ namespace OneTradeCentral.iOS
 // 		PROD
 		//private static string APP_ID = "EJ24Q24DZP.com.orderlinc.mobile"; // App ID of the original OrderLinc
 //		private static string APP_ID = "EJ24Q24DZP.com.orderlinc.mpe"; // App ID of OrderLinc-MPE
-		private static string APP_ID = "9TF8VNJ362.com.blueprintgroup.orderlinc.mpe"; // App ID of OrderLinc-MPE deployed internally by CCS
+		//private static string APP_ID = "9TF8VNJ362.com.blueprintgroup.orderlinc.mpe"; // App ID of OrderLinc-MPE deployed internally by CCS
 
 //		USED FOR THE MEANTIME
 //		private static string APP_ID = "9TF8VNJ362.com.blueprintgroup.orderlinc.trg"; // App ID of OrderLinc-TRG deployed internally by CCS
 //		private static string APP_ID = "EJ24Q24DZP.com.orderlinc.mobilestg";
-//		private static string APP_ID = "EJ24Q24DZP.com.orderlinc.mobiletst"; // App ID of the original OrderLinc STG
+		private static string APP_ID = "EJ24Q24DZP.com.orderlinc.mobiletst"; // App ID of the original OrderLinc STG
 //		private static string APP_ID = "EJ24Q24DZP.com.orderlinc.reintegration.stg"; // App ID of OrderLinc Reintegration
 
 		private static string _username = null;

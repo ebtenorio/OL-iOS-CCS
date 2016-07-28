@@ -30,7 +30,7 @@
     <MtouchDebug>true</MtouchDebug>
     <MtouchProfiling>true</MtouchProfiling>
     <AssemblyName>OrderLincTST</AssemblyName>
-    <CodesignProvision>0854c391-3db5-4448-b5d5-6247fd43c6dc</CodesignProvision>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -101,7 +101,7 @@
     <WarningLevel>4</WarningLevel>
     <BuildIpa>true</BuildIpa>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Distribution: Powerforce Australia PTY LTD</CodesignKey>
+    <CodesignKey>iPhone Distribution: 4Solutions Pty Ltd (EJ24Q24DZP)</CodesignKey>
     <CodesignKey>iPhone Distribution: 4Solutions Pty Ltd (EJ24Q24DZP)</CodesignKey>
     <IpaPackageName>
     </IpaPackageName>

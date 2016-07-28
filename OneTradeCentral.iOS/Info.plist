@@ -42,11 +42,11 @@
 		<string>Icon-Small</string>
 		<string>Icon-Small@2x</string>
 	</array>
-	<key>CFBundleIdentifier</key>
-	<string>com.blueprintgroup.orderlinc.mpe</string>
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>MainStoryboard_iPad</string>
 	<key>CFBundleName</key>
 	<string>OrderLinc</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.orderlinc.mobiletst</string>
 </dict>
 </plist>

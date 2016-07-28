@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="OneTradeCentral.iOS/OrderLinc-MPE.iOS.csproj">
   <MonoDevelop.Ide.Workbench ActiveDocument="OneTradeCentral.iOS/Info.plist">
     <Files>
-      <File FileName="OneTradeCentral.iOS/Utility/Constants.cs" Line="26" Column="25" />
+      <File FileName="OneTradeCentral.iOS/Utility/Constants.cs" Line="42" Column="4" />
       <File FileName="OneTradeCentral.iOS/AppInfoViewController.cs" Line="48" Column="29" />
       <File FileName="OneTradeCentral.iOS/Info.plist" />
-      <File FileName="OneTradeCentral.iOS/Utility/Identity.cs" Line="24" Column="48" />
+      <File FileName="OneTradeCentral.iOS/Utility/Identity.cs" Line="22" Column="66" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/2linc-solutions/Desktop/OrderLinc-REINTEGRATION/OneTradeCentral.iOS/AppInfoViewController.cs" line="153" column="1" />
@@ -31,7 +31,7 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.OrderLinc-MPE.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.ItemProperties.OrderLinc-MPE.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.9965D899-86FA-4887-9F1D-1DD63A5BE62B" />
   <DisabledProjects>
     <String>OneTradeCentral.Tests.iOS/OrderLinc.Tests.iOS.csproj</String>
   </DisabledProjects>
